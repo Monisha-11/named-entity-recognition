@@ -99,10 +99,6 @@ max_len = 50
 ```
 ### Padding:
 ```python
-nums = [[1], [2, 3], [4, 5, 6]]
-sequence.pad_sequences(nums)
-nums = [[1], [2, 3], [4, 5, 6]]
-sequence.pad_sequences(nums,maxlen=2)
 X = sequence.pad_sequences(maxlen=max_len,
                   sequences=X1, padding="post",
                   value=num_words-1)
@@ -135,6 +131,7 @@ history = model.fit(
     batch_size=50,
     epochs=2,
 )
+```
 ### Metrics:
 ```python
 metrics = pd.DataFrame(model.history.history)
